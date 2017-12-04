@@ -23,7 +23,7 @@ issue = File.read('.git/ISSUE') if File.exists? '.git/ISSUE'
 
 File.write(ARGV[0], "[##{issue}] #{msg}") && exit(0) if !issue.nil?
 
-puts "Do you want to specify issue? Enter a number if yes and anything else if no."
+puts "Do you want to specify issue? Enter a number if yes or anything else if no."
 
 # Have no idea why STDIN.reopen is not working
 open '/dev/tty' do |f|
